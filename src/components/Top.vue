@@ -62,7 +62,8 @@
               <option>100</option>
             </select>
             <p>設定した期間までに貯金できなかった場合に、Pigの中の残金のうち、設定したパーセンテージが投げ銭としてPiggy Bank作成者に送られます。</p>
-            <a class="button is-info is-outlined" v-on:click="MakeModal = true">作成</a>
+            <a class="button is-info is-outlined" v-if="web3.networkId == 1" v-on:click="MakeModal = true">作成</a>
+            <p v-if="web3.networkId != 1" style="color:red">MainNetでの接続をお願いします。</p>
           </div>
         </div>
         <div class="column is-7">
