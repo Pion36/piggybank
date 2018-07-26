@@ -41,9 +41,9 @@
             <p>Pigの名前(貯金の目的や、可愛い名前でも！)</p>
             <input v-model="name" placeholder="名前を入れてね">
             <p>貯金の目標額(いくら貯めますか？)</p>
-            <input v-model="target" placeholder="目標額を記入"  pattern="\d*" number> Ether
+            <input v-model="target" placeholder="目標額を記入"  type="number" number> Ether
             <p>最初にいくら入れますか？</p>
-            <input v-model="amount" placeholder="投入額を記入"  pattern="\d*" number> Ether
+            <input v-model="amount" placeholder="投入額を記入"  type="number" number> Ether
             <p>(オプション)</p>
             <p>どのくらいの期間で貯金する予定ですか？(デフォルトだと1年です)</p>
             <select v-model="limit">
@@ -147,7 +147,7 @@
            </header>
            <section class="modal-card-body">
              <p>名前: {{exertid}}:{{ exertname }}</p>
-             <input v-model="amount" placeholder="目標額を記入"  pattern="\d*" number> Ether
+             <input v-model="amount" placeholder="目標額を記入" type="number" number> Ether
            </section>
            <footer class="modal-card-foot">
              <button class="button" type="button" @click="deposit(exertid,amount)">Pigに入れる</button>
