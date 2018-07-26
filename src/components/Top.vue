@@ -177,7 +177,7 @@
            </header>
            <section class="modal-card-body">
              <p>名前: {{ exertname }}</p>
-             <p v-if="unixcurrent() <= showlimit * 1000">目標額溜まってないですが本当に割りますか？</p>
+             <p v-if="unixcurrent() <= showlimit * 1000">目標額溜まってないですが本当に割りますか？<br>このままだと投げ銭が発生します。</p>
              <p v-if="unixcurrent() > showlimit * 1000">期限をすぎてしまったため、投げ銭が発生します。</p>
            </section>
            <footer class="modal-card-foot">
